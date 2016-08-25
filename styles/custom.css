@@ -5,10 +5,20 @@
   font-weight: normal;
   font-style: normal; }
 
+.row {
+  display: flex;
+  flex-flow: row wrap; }
+
+.col {
+  flex-grow: 1;
+  flex-basis: 100%;
+  max-width: 100%; }
+
 /* ------------------- Body ------------------- */
 body {
   font-family: 'helsinkiregular', 'sans-serif';
-  background-image: url(images/bg.jpg); }
+  background-image: url(images/bg.jpg);
+  background-attachment: scroll; }
 
 /* ------------------- Header ------------------- */
 header {
@@ -30,19 +40,15 @@ main {
   border: 0;
   padding: 0.5em; }
 
-.img-wrapper {
-  display: flex;
-  align-items: center;
-  transform: rotate(-20deg); }
-
 .ship-wrapper {
-  display: flex; }
-  .ship-wrapper > img {
-    width: 100%;
-    height: auto; }
+  align-items: center; }
 
-.table-wrapper {
-  margin-left: 2em; }
+@media (min-width: 760px) {
+  .ship-wrapper .col {
+    flex-basis: 50%;
+    max-width: 50%; }
+  #ship-img {
+    transform: rotate(-20deg); } }
 
 /* ------------------- Footer ------------------- */
 footer {
