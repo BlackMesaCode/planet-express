@@ -1,0 +1,102 @@
+/* ------------------- General ------------------- */
+
+@font-face {
+    font-family: 'helsinkiregular';
+    src: url('fonts/helsinki-webfont.woff2') format('woff2'), url('fonts/helsinki-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Remember: LoVe-HAte
+// a:link { color:#0271fb; }
+// a:visited { color:#bd02fb; }
+// a:hover, a:focus { color:#000; }
+// a:active { color:#fb0e02; }
+
+/* ------------------- Body ------------------- */
+
+body {
+    font-family: 'helsinkiregular', 'sans-serif';
+    background-image: url(images/bg.jpg);
+}
+
+
+/* ------------------- Header ------------------- */
+
+header {
+    background-color: #000;
+}
+
+
+/* ------------------- Navigation ------------------- */
+
+nav {}
+
+
+/* ------------------- Main ------------------- */
+
+.wrap {
+    margin: 0 auto;
+    max-width: 50em;
+    background-image: url(images/bg1.jpg);
+}
+
+main {
+    padding: 2em;
+}
+
+
+/* ------------------- Ship ------------------- */
+
+#ship {
+    td,
+    th {
+        border: 0;
+        padding: 0.5em;
+    }
+}
+
+.img-wrapper {
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    transform: rotate(-20deg);
+}
+
+.ship-wrapper {
+    display: flex;
+    &>img {
+        width: 100%;
+        height: auto;
+    }
+    // &>table,
+    // img {
+    //     flex-shrink: 1;
+    //     flex-grow: 1;
+    // }
+}
+
+.table-wrapper {
+    margin-left: 2em;
+}
+
+
+/* ------------------- Footer ------------------- */
+
+footer {
+    background-color: #000;
+}
+
+
+/* ------------------- C&P Media Queries ------------------- */
+
+
+/* Adjust breakpoints to the layout and not to specific devices! */
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (min-width: 700px) {}
+
+@media only screen and (min-width: 600px) {}

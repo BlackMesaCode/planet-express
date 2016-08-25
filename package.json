@@ -2,10 +2,6 @@
   "name": "PlanEx",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://BlackMesa@bitbucket.org/BlackMesa/planex.git"
@@ -17,6 +13,6 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "normalize.css": "^4.2.0",
-    "pesticide": "^1.3.1"
+    "sass-essentials": "^1.0.3"
   }
 }

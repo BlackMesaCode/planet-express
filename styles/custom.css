@@ -1,0 +1,52 @@
+/* ------------------- General ------------------- */
+@font-face {
+  font-family: 'helsinkiregular';
+  src: url("fonts/helsinki-webfont.woff2") format("woff2"), url("fonts/helsinki-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ------------------- Body ------------------- */
+body {
+  font-family: 'helsinkiregular', 'sans-serif';
+  background-image: url(images/bg.jpg); }
+
+/* ------------------- Header ------------------- */
+header {
+  background-color: #000; }
+
+/* ------------------- Navigation ------------------- */
+/* ------------------- Main ------------------- */
+.wrap {
+  margin: 0 auto;
+  max-width: 50em;
+  background-image: url(images/bg1.jpg); }
+
+main {
+  padding: 2em; }
+
+/* ------------------- Ship ------------------- */
+#ship td,
+#ship th {
+  border: 0;
+  padding: 0.5em; }
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  transform: rotate(-20deg); }
+
+.ship-wrapper {
+  display: flex; }
+  .ship-wrapper > img {
+    width: 100%;
+    height: auto; }
+
+.table-wrapper {
+  margin-left: 2em; }
+
+/* ------------------- Footer ------------------- */
+footer {
+  background-color: #000; }
+
+/* ------------------- C&P Media Queries ------------------- */
+/* Adjust breakpoints to the layout and not to specific devices! */
