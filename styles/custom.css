@@ -52,6 +52,24 @@ nav {
 main {
   padding: 2%; }
 
+.line-through {
+  text-decoration: line-through; }
+
+/* ------------------- Crew ------------------- */
+.portrait-wrapper {
+  padding: 10px 40px; }
+
+.profile {
+  display: inline-block; }
+
+@media (min-width: 650px) {
+  #portraits .col {
+    flex-basis: 50%; } }
+
+@media (min-width: 800px) {
+  #portraits .col {
+    flex-basis: 33.3%; } }
+
 /* ------------------- Ship ------------------- */
 #ship td,
 #ship th {
