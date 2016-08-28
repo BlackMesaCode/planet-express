@@ -30,24 +30,28 @@
                 <img src="styles/images/logo.png" alt="Planet Express Logo" id="logo">
             </div>
 
-            <div id="black-header-bar"></div>
+            <div id="black-header-bar">
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="#company-anchor">Unternehmen</a></li>
+                        <li><a href="#crew-anchor">Crew</a></li>
+                        <li><a href="#ship-anchor">Schiff</a></li>
+                        <li><a href="#order-anchor">Auftrag</a></li>
+                        <li><a href="#contact-anchor">Anflug</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-            <nav role="navigation">
-                <ul>
-                    <li>Unternehmen</li>
-                    <li>Crew</li>
-                    <li>Schiff</li>
-                    <li>Auftrag</li>
-                    <li>Anflug</li>
-                </ul>
-            </nav>
+
+
         </header>
 
 
         <main role="main">
-            <section>
-                <h1>
+            <section id="company">
+                <h1><a class="anchor" id="company-anchor">
                 Willkommen bei Planet Express!
+                </a>
             </h1>
                 <p>
                     Wir bieten intergalaktische Transportdienste zu einem beinahe fairen Preis! Gegründet im Jahre 2961 von Professor Hubert J. Farnsworth gehört Planet Express heute zu den <span class="line-through">erfolgreichsten</span> Lieferfirmen
@@ -74,10 +78,10 @@
             </section>
 
 
-            <section>
+            <section id="crew">
                 <h1>
-                Crew
-            </h1>
+                    <a class="anchor" id="crew-anchor">Crew</a>
+                </h1>
                 <p>
                     Bei unserer überqualifizierten 3-köpfige Schiffscrew ist ihr Paket in besten Händen:
                 </p>
@@ -90,9 +94,7 @@
                         <div class="profile">
                             <h3>Turanga Leela</h3>
                             <ul>
-                                <li>Test</li>
-                                <li>Test</li>
-                                <li>Test</li>
+                                <li>Captain</li>
                             </ul>
                         </div>
 
@@ -104,9 +106,7 @@
                         <div class="profile">
                             <h3>Philipp J. Fry</h3>
                             <ul>
-                                <li>Test</li>
-                                <li>Test</li>
-                                <li>Test</li>
+                                <li>Lieferjunge</li>
                             </ul>
                         </div>
 
@@ -118,9 +118,7 @@
                         <div class="profile">
                             <h3>Bender B. Rodriguez</h3>
                             <ul>
-                                <li>Test</li>
-                                <li>Test</li>
-                                <li>Test</li>
+                                <li>Assistierender Verkaufsleiter</li>
                             </ul>
                         </div>
 
@@ -131,8 +129,8 @@
 
             <section id="ship">
                 <h1>
-                Schiff
-            </h1>
+                  <a class="anchor" id="ship-anchor">Schiff</a>
+                </h1>
 
                 <div class="row ship-wrapper">
                     <div class="col ship-div">
@@ -178,44 +176,89 @@
             </section>
 
 
-            <section>
+            <section id="order">
                 <h1>
-                Order
-            </h1>
+                <a class="anchor" id="order-anchor">Auftrag</a>
+                </h1>
                 <p>
-                    Fill out the form and we will make you an offer.
+                    Über unser Formular können Sie ganz bequem eine Lieferung beauftragen:
                 </p>
                 <form action="/" method="POST">
-                    <div>
-                        <input type="text" name="name">
-                        <label for="name">Name</label>
-                    </div>
-                    <div>
-                        <input type="text" name="cargo">
-                        <label for="cargo">Cargo</label>
-                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" name="name">
+                            </div>
 
-                    <div>
-                        <textarea type="text" name="message"></textarea>
-                        <label for="message">Message</label>
-                    </div>
+                            <div>
+                                <label for="name">Hologramm-ID</label>
+                                <input type="text" name="name">
+                            </div>
 
+                            <div>
+                                <label for="cargo">Frachtgut</label>
+                                <input type="text" name="cargo">
+                            </div>
+
+                            <div>
+                                <label for="dangercargo"><input id="dangercargo" name="dangercargo" type="checkbox">Gefahrgut?</label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+
+                            <div>
+                                <label for="from">Abholplanet</label>
+                                <select name="from" id="">
+                            <option>Decapod 10</option>
+                            <option>Mond</option>
+                            <option>Amazonia</option>
+                            <option>Chapek 9</option>
+                            <option selected>Erde</option>
+                            <option>Krypton</option>
+                            <option>Mars</option>
+                            <option>Omicron Persei 8</option>
+                            <option>Tova 9</option>
+                        </select>
+                            </div>
+
+                            <div>
+                                <label for="to">Zielplanet</label>
+                                <select name="to" id="">
+                            <option>Decapod 10</option>
+                            <option>Mond</option>
+                            <option>Amazonia</option>
+                            <option>Chapek 9</option>
+                            <option>Erde</option>
+                            <option>Krypton</option>
+                            <option>Mars</option>
+                            <option>Omicron Persei 8</option>
+                            <option>Tova 9</option>
+                        </select>
+                            </div>
+
+                            <div>
+                                <label for="message">Nachricht</label>
+                                <textarea type="text" name="message" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="button">
-                        <button type="submit">Send your message</button>
+                        <button type="submit">Auftrag absenden</button>
                     </div>
                 </form>
 
             </section>
 
-            <section>
+            <section id="contact">
                 <h1>
-                Anflug
-            </h1>
+                    <a class="anchor" id="contact-anchor">Kontakt</a>
+                </h1>
                 <p>
                     Unser Hauptsitz befindet sich in Neu New York. Per Rohrpostsystem erreichen Sie uns ...
                 </p>
-
             </section>
 
         </main>
@@ -228,7 +271,7 @@
 
 
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
     <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
     <script src="js/main.js"></script>
 

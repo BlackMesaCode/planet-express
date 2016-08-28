@@ -7,6 +7,29 @@
     font-style: normal;
 }
 
+$yellow: #faf0c2;
+$turkese: #7ff7ed;
+$darkred: #a70c1c;
+
+input, select, textarea {
+    font-family: inherit;
+    border-radius: 0.5em;
+    background-color: $yellow;
+    border: 1px dashed black;
+}
+
+select {
+    padding: 3px;
+}
+
+button {
+    font-family: inherit;
+    background-color: $turkese;
+    border-radius: 0.5em;
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+
 
 // Remember: LoVe-HAte
 // a:link { color:#0271fb; }
@@ -52,6 +75,11 @@ header {
 
 #logo-div:hover {
     transform: rotate(360deg)
+
+}
+
+#logo-div:hover nav {
+        display: block;
 }
 
 img {
@@ -59,6 +87,39 @@ img {
     max-height:100%;
 }
 
+nav {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 6vh;
+    width: 100%;
+    padding: 8vh 10% 2vh 10%;
+    z-index: 100;
+
+    a { 
+        text-decoration: none; 
+        color: inherit;
+        display: inline-block;
+        width: 100%;
+    }
+    a:active { color:$darkred; }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        &>li {
+            margin-bottom: 0.3em;
+        }
+
+        &>li:hover,&>li:focus  {
+            cursor: pointer;
+            color: $darkred;
+        }
+    }
+}
 
 
 /* ------------------- Navigation ------------------- */
@@ -80,13 +141,20 @@ main {
     padding: 2%;
 }
 
+.anchor {
+    padding-top: 15vh;
+}
+
 .line-through {
     text-decoration: line-through;
 }
 
 /* ------------------- Crew ------------------- */
 
-
+#crew ul {
+    list-style: none;
+    padding: 0;
+}
 
 .portrait-wrapper {
     padding: 10px 40px;
@@ -119,6 +187,7 @@ main {
     }
 }
 
+
 .ship-wrapper {
     align-items: center;
 }
@@ -139,9 +208,38 @@ main {
     }
     #ship-img {
         transform: rotate(-15deg);
+        // position: relative;
+        // left: -4em;
     }
 }
 
+/* ------------------- Order ------------------- */
+
+#order {
+    text-align: center;
+}
+
+#order {
+    
+    input[type="text"], textarea {
+        width: 100%;
+        max-width: 80%;
+    }
+
+    label {
+        display: block;
+    }
+
+    .col div {
+        margin-bottom: 1em;
+    }
+}
+
+@media (min-width: 650px) {
+    #order .col {
+        flex-basis: 50%;
+    }
+}
 
 /* ------------------- Footer ------------------- */
 

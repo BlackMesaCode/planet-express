@@ -5,6 +5,22 @@
   font-weight: normal;
   font-style: normal; }
 
+input, select, textarea {
+  font-family: inherit;
+  border-radius: 0.5em;
+  background-color: #faf0c2;
+  border: 1px dashed black; }
+
+select {
+  padding: 3px; }
+
+button {
+  font-family: inherit;
+  background-color: #7ff7ed;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  padding: 4px 10px; }
+
 /* ------------------- Body ------------------- */
 body {
   font-family: 'helsinkiregular', 'sans-serif';
@@ -35,9 +51,38 @@ header {
 #logo-div:hover {
   transform: rotate(360deg); }
 
+#logo-div:hover nav {
+  display: block; }
+
 img {
   max-width: 100%;
   max-height: 100%; }
+
+nav {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 6vh;
+  width: 100%;
+  padding: 8vh 10% 2vh 10%;
+  z-index: 100; }
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%; }
+  nav a:active {
+    color: #a70c1c; }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    nav ul > li {
+      margin-bottom: 0.3em; }
+    nav ul > li:hover, nav ul > li:focus {
+      cursor: pointer;
+      color: #a70c1c; }
 
 /* ------------------- Navigation ------------------- */
 nav {
@@ -52,10 +97,17 @@ nav {
 main {
   padding: 2%; }
 
+.anchor {
+  padding-top: 15vh; }
+
 .line-through {
   text-decoration: line-through; }
 
 /* ------------------- Crew ------------------- */
+#crew ul {
+  list-style: none;
+  padding: 0; }
+
 .portrait-wrapper {
   padding: 10px 40px; }
 
@@ -89,6 +141,24 @@ main {
     padding: 0; }
   #ship-img {
     transform: rotate(-15deg); } }
+
+/* ------------------- Order ------------------- */
+#order {
+  text-align: center; }
+
+#order input[type="text"], #order textarea {
+  width: 100%;
+  max-width: 80%; }
+
+#order label {
+  display: block; }
+
+#order .col div {
+  margin-bottom: 1em; }
+
+@media (min-width: 650px) {
+  #order .col {
+    flex-basis: 50%; } }
 
 /* ------------------- Footer ------------------- */
 footer {
