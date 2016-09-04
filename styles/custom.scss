@@ -67,14 +67,21 @@ header {
 
 #logo-div {
     position: fixed;
+    left: 50%;
     height: 10vh;
     z-index: 1;
-    transition: transform 1s ease;
+    transform: translateX(-50%);
     margin-top: 1vh;
 }
 
-#logo-div:hover {
-    transform: rotate(360deg)
+#logo-rotation-wrapper {
+height: 10vh;
+    transition: transform 1s ease;
+}
+
+#logo-rotation-wrapper:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
 
 }
 
@@ -102,7 +109,7 @@ nav {
         display: inline-block;
         width: 100%;
     }
-    a:active { color:$darkred; }
+    a:active { color: $darkred; }
 
     ul {
         list-style: none;

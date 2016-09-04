@@ -45,17 +45,24 @@ header {
 
 #logo-div {
   position: fixed;
+  left: 50%;
   height: 10vh;
   z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 1vh; }
+
+#logo-rotation-wrapper {
+  height: 10vh;
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  margin-top: 1vh; }
+  transition: transform 1s ease, -webkit-transform 1s ease; }
 
-#logo-div:hover {
+#logo-rotation-wrapper:hover {
   -webkit-transform: rotate(360deg);
-          transform: rotate(360deg); }
+          transform: rotate(360deg);
+  cursor: pointer; }
 
 #logo-div:hover nav {
   display: block; }
