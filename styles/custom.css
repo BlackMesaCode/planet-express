@@ -29,7 +29,9 @@ body {
 
 /* ------------------- Header ------------------- */
 header {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 10vh; }
 
@@ -45,11 +47,15 @@ header {
   position: fixed;
   height: 10vh;
   z-index: 1;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
   margin-top: 1vh; }
 
 #logo-div:hover {
-  transform: rotate(360deg); }
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg); }
 
 #logo-div:hover nav {
   display: block; }
@@ -116,11 +122,13 @@ main {
 
 @media (min-width: 650px) {
   #portraits .col {
-    flex-basis: 50%; } }
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
 
 @media (min-width: 800px) {
   #portraits .col {
-    flex-basis: 33.3%; } }
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%; } }
 
 /* ------------------- Ship ------------------- */
 #ship td,
@@ -129,18 +137,23 @@ main {
   padding: 0.5em; }
 
 .ship-wrapper {
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
 
 .ship-div {
   padding: 2em; }
 
 @media (min-width: 760px) {
   .ship-wrapper .col {
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     max-width: 50%;
     padding: 0; }
   #ship-img {
-    transform: rotate(-15deg); } }
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); } }
 
 /* ------------------- Order ------------------- */
 #order {
@@ -158,7 +171,8 @@ main {
 
 @media (min-width: 650px) {
   #order .col {
-    flex-basis: 50%; } }
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
 
 /* ------------------- Footer ------------------- */
 footer {

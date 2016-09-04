@@ -1,10 +1,12 @@
 // Sass configuration
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
     gulp.src('styles/*.scss') // to watch ALL: ./**/*.scss
         .pipe(sass().on('error', sass.logError)) // .on('error', sass.logError)  to swallow error
+        .pipe(autoprefixer())
         .pipe(gulp.dest(function(f) {
             return f.base;
         }))
