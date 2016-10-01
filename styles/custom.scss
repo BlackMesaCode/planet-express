@@ -223,7 +223,7 @@ main {
 /* ------------------- Order ------------------- */
 
 #order {
-    text-align: center;
+    // text-align: center;
 }
 
 #order {
@@ -251,6 +251,10 @@ main {
 /* ------------------- Footer ------------------- */
 
 footer {
+    color: #444;
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.3em;
     background-color: #000;
 }
 
