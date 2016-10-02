@@ -10,10 +10,10 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/BlackMesa/planex#readme",
   "dependencies": {
+    "boilerplate-styles": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-sass": "^2.3.2",
-    "normalize.css": "^4.2.0",
-    "sass-essentials": "^1.0.3"
+    "normalize.css": "^4.2.0"
   }
 }
